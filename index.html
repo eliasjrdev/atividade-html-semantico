@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaturante Bella Vista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <header>: É um elemento de cabeçalho, semânticamente é um elemento que deve englobar outros conteúdos de suporte introdutório ou navegacionais.
+        * Estou usando neste caso para englobar o titulo inicial e principal da página (h1), a tag <nav> e as tags <ol> e <li> que serão tags que permitirão
+          dar navegabilidade entre as sessões da página, por tanto, faz sentido semântico essas tags estarem dentro da tag <header>. 
+
+        * O impacto de SEO é que a tag <header> informa ao Google e demais buscadores que aquele bloco de código contém informações introdutórias ou 
+        navegacionais principal. Isso facilita a navegação por leitores de tela, por exemplo.
+
+        * Com relação a acessibilidade, usuários com deficiência visual por exemplo podem navegar pelo documento saltando entre seções 
+    -->
+    <header>
+        <h1>Restaurante Bella Vista</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Horários</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Bem-vindo ao restaurante Bella Vista</h2>
+            <p>
+                <em>Sabores autênticos da Itália</em> no coração da cidade. Desfrute de <strong>pratos tradicionais
+                    preparados</strong> com ingredientes frescos e muito amor.
+            </p>
+        </section>
+        <article>
+            <div>
+                <h2>Nossa história</h2>
+                <h3>Uma Tradição de 50 Anos</h3>
+                <p>
+                    Fundada em 15 de junho de 1973, a Trattoria Bella Vista tem sido um refúgio
+                    para amantes da culinária italiana autêntica. Nossa família trouxe receitas
+                    tradicionais da região da Toscana e as compartilha com você há mais de cinco décadas.
+                </p>
+                <p>
+                    Cada prato é preparado com ingredientes selecionados e técnicas tradicionais
+                    que passam de geração a geração. Nosso compromisso é oferecer não apenas uma refeição,
+                    mas uma experiência gastronômica memorável.
+                </p>
+            </div>
+            <div>
+                <aside>
+                    <h3>Destaque do Mês</h3>
+                    <p>
+                        <dfn>Risotto al Tartufo -</dfn> Nosso risotto especial com trufas brancas
+                        importadas diretamente do Piemonte.
+                        Uma experiência única para o paladar!
+                    </p>
+                </aside>
+            </div>
+        </article>
+        <section>
+            <h2>Prato em Destaque</h2>
+            <figure>
+                <img src="assets/imagem-prato.jpg"
+                    alt="Imagem de um prato servido com macarrão com uma aparencia deveras palatável width=" 700"
+                    height="500"">
+                <figcaption>Nossa famosa Pasta Carbonara - preparada com receita tradicional romana,
+                     usando ovos frescos, guanciale e Pecorino Romano autêntico.
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Horários de Funcionamento</h2>
+            <table>
+                <caption>Horários de Atendimento - Temporada de Verão 2025</caption>
+                <thead>
+                    <tr>
+                        <th>Dia da semana</th>
+                        <th>Almoço</th>
+                        <th>Jantar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda a Sexta</td>
+                        <td>Fechado</td>
+                        <td><time datetime=" 18:00">18h</time> - <time datetime="23:00"></time>23h</td>
+                </tr>
+                <tr>
+                    <td>Terça a quinta</td>
+                    <td><time datetime="12:00">12h</time> - <time datetime="15:00"></time>15h</td>
+                    <td><time datetime="18:00">18h</time> - <time datetime="23:00"></time>23h</td>
+                </tr>
+                <tr>
+                    <td>Sexta-feira</td>
+                    <td><time datetime="12:00">12h</time> - <time datetime="15:00"></time>15h</td>
+                    <td><time datetime="18:00">18h</time> - <time datetime="23:00"></time>23h</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td><time datetime="12:00">12h</time> - <time datetime="16:00"></time>16h</td>
+                    <td><time datetime="18:00">18h</time> - <time datetime="00:00"></time>00h</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td><time datetime="12:00">12h</time> - <time datetime="18:00"></time>18h</td>
+                    <td><time datetime="18:00">18h</time> - <time datetime="22:00"></time>22h</td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan=" 3">Reservas recomendadas para fins de semana</td>
+                    </tr>
+                </tfoot>
+                </table>
+        </section>
+        <section>
+            <h2>Perguntas Frequentes</h2>
+            <details>
+                <summary>Vocês aceitam cartão de crédito</summary>
+                <p>Sim! Aceitamos todos os principais cartões de crédito e débito, além de NFC e PIX.</p>
+            </details>
+            <details>
+                <summary>Há opções vegetarianas no menu?</summary>
+                <p>Certamente! Temos diversas opções vegetarianas e veganas, incluindo nossas deliciosas lasanhas de
+                    berinjela erisottos com cogumelos.</p>
+            </details>
+            <details>
+                <summary>Preciso fazer reserva?</summary>
+                <p>Para grupos acima de 4 pessoas ou visitas aos fins de semana,recomendamos fortemente fazer reserva
+                    através do nosso formulário ou ligando para (99) 9999-9999.</p>
+            </details>
+            <details>
+                <summary>Vocês oferecem serviço de delivery?</summary>
+                <p>Sim! Fazemos entregas em um raio de 5km do restaurante. Pedidos podem ser feitos pelo telefone ou
+                    aplicativos parceiros.</p>
+            </details>
+        </section>
+        <section>
+            <h2>Faça sua Reserva</h2>
+            <form action="">
+                <fieldset>
+                    <legend>Dados da reserva</legend>
+                    <div>
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="data">Data da reserva</label>
+                        <input type="datetime" id="data" name="data" required>
+                    </div>
+                    <div>
+                        <label for="hora">Horario da reserva</label>
+                        <input type="time" id="data" name="hora" required>
+                    </div>
+                    <div>
+                        <label for="quantidadeP">Quantidade de pessoas</label>
+                        <input type="datetime" id="quantidadeP" name="quantidadeP" required>
+                    </div>
+                    <dialog id="confirmacaoMsgm">
+                        <h2>Confirmação de reserva</h2>
+                        <p>Sua reserva foi confirmada com sucesso !</p>
+                        <button id="fechar">Fechar</button>
+                    </dialog>
+
+                    <button id="abrirBtn">Enviar reserva</button>
+
+                    <script>
+                        const dialog = document.getElementById('confirmacaoMsgm');
+                        const abrirBtn = document.getElementById('abrirBtn');
+                        const fechar = document.getElementById('fechar');
+
+                        abrirBtn.addEventListener('click', () => dialog.showModal());
+                        fechar.addEventListener('click', () => dialog.close());
+                    </script>
+                </fieldset>
+            </form>
+        </section>
+        <footer>
+            <address>
+                Endereço:<br>
+                Rua das Oliveiras, 234<br>
+                Jardim Toscana - São Paulo, SP<br>
+                CEP: 01234-567<br>
+                Telefone: <a href="tel:+5599999999999">(99) 99999-9999</a><br>
+                Email: <a href="mailto:contato@rickbarber.com">contato@bellavista.com.br</a>
+            </address>
+        </footer>
+    </main>
+</body>
+
+</html>
