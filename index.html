@@ -34,8 +34,9 @@
         <section id="bem-vindo">
             <h2>Bem-vindo ao restaurante<br> Bella Vista</h2>
             <p>
-                <em>Sabores autênticos da Itália</em> no coração da cidade. Desfrute de <strong>pratos tradicionais
-                    preparados</strong> <br>com ingredientes frescos e muito amor.
+                Sabores <em>autênticos</em> da Itália no coração da cidade. Desfrute de <strong>pratos
+                    tradicionais</strong>
+                preparados<br>com ingredientes frescos e muito amor.
             </p>
         </section>
         <section id="nossa-historia">
@@ -44,7 +45,7 @@
                 <div id="tradicao">
                     <h3>Uma Tradição de 50 Anos</h3>
                     <p>
-                        Fundada em 15 de junho de 1973, a Trattoria Bella Vista tem sido um refúgio
+                        Fundado em 15 de junho de 1973, o restaurante Bella Vista tem sido um refúgio
                         para amantes da culinária italiana autêntica. Nossa família trouxe receitas
                         tradicionais da região da Toscana e as compartilha com você há mais de cinco décadas.
                     </p>
@@ -58,7 +59,7 @@
                     <aside>
                         <h3>Destaque do Mês</h3>
                         <p>
-                            <dfn>Risotto al Tartufo -</dfn> Nosso risotto especial com trufas brancas
+                            <mark>Risotto al Tartufo</mark> - Nosso risotto especial com trufas brancas
                             importadas diretamente do Piemonte.
                             Uma experiência única para o paladar!
                         </p>
@@ -73,7 +74,7 @@
                 <img src="assets/imagem-prato.jpg"
                     alt="Imagem de um prato servido com macarrão com uma aparencia deveras palatável">
                 <figcaption>
-                    Nossa famosa Pasta Carbonara - preparada com receita tradicional romana,
+                    Nossa famosa <mark>Pasta Carbonara </mark> - preparada com receita tradicional romana,
                     usando ovos frescos, guanciale e Pecorino Romano autêntico.
                 </figcaption>
             </figure>
@@ -128,7 +129,8 @@
             <h2>Perguntas Frequentes</h2>
             <details>
                 <summary>Vocês aceitam cartão de crédito</summary>
-                <p>Sim! Aceitamos todos os principais cartões de crédito e débito, além de NFC e PIX.</p>
+                <p>Sim! Aceitamos todos os principais cartões de crédito e débito, além de <abbr
+                        title="Pagamento por aproximação">NFC</abbr> e PIX.</p>
             </details>
             <details>
                 <summary>Há opções vegetarianas no menu?</summary>
@@ -148,47 +150,34 @@
         </section>
         <section id="reserva">
             <h2>Faça sua Reserva</h2>
-            <form action="">
-                <fieldset>
-                    <legend>Dados da reserva</legend>
-                    <div>
-                        <label for="nome">Nome completo</label><br>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="data">Data da reserva</label><br>
-                        <input type="datetime" id="data" name="data" required>
-                    </div>
-                    <div>
-                        <label for="hora">Horario da reserva</label><br>
-                        <input type="time" id="data" name="hora" required>
-                    </div>
-                    <div>
-                        <label for="quantidadeP">Quantidade de pessoas</label><br>
-                        <input type="datetime" id="quantidadeP" name="quantidadeP" required>
-                    </div>
-                    <dialog id="confirmacaoMsgm">
-                        <h2>Confirmação de reserva</h2>
-                        <p>Sua reserva foi confirmada com sucesso !</p>
-                        <button id="fechar">Fechar</button>
-                    </dialog>
-
-                    <button id="abrirBtn">Enviar reserva</button>
-
-                    <script>
-                        const dialog = document.getElementById('confirmacaoMsgm');
-                        const abrirBtn = document.getElementById('abrirBtn');
-                        const fechar = document.getElementById('fechar');
-
-                        abrirBtn.addEventListener('click', () => dialog.showModal());
-                        fechar.addEventListener('click', () => dialog.close());
-                    </script>
-                </fieldset>
-            </form>
+            <dialog>
+                <form action="">
+                    <fieldset>
+                        <legend>Dados da reserva</legend>
+                        <div>
+                            <label for="nome">Nome completo</label><br>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="data">Data da reserva</label><br>
+                            <input type="datetime" id="data" name="data" required>
+                        </div>
+                        <div>
+                            <label for="hora">Horario da reserva</label><br>
+                            <input type="time" id="data" name="hora" required>
+                        </div>
+                        <div>
+                            <label for="quantidadeP">Quantidade de pessoas</label><br>
+                            <input type="datetime" id="quantidadeP" name="quantidadeP" required>
+                        </div>
+                        <button id="abrirBtn">Enviar reserva</button>
+                    </fieldset>
+                </form>
+            </dialog>
         </section>
         <footer>
             <address>

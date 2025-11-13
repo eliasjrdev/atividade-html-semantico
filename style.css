@@ -318,3 +318,10 @@ footer address{
     justify-content: center;
 }
 
+mark {
+  background-color: #F3E6DA;
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+}
+
+
