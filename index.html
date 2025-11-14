@@ -233,6 +233,16 @@
                     pois o <figcaption> e o alt da imagem descrevem claramente o conteúdo visual.
             -->
             <figure>
+                <!-- <img>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representar a inserção de uma imagem no documento
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para inserir a imagem de um prato do restaurante na página, esta é a tag semânticamente correta 
+                    a ser usada para estes casos.
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Essa tag possui um atributo chamado "alt" que é essencial para acessibilidade, perimitindo
+                    que leitores de tela através do conteúdo de "alt" possam forncer a um usuário com deficiencia visual por exemplo, a informação sobre o que 
+                    se trata aquela imagem.
+                -->
                 <img src="assets/imagem-prato.jpg"
                     alt="Imagem de um prato servido com macarrão com uma aparencia deveras palatável">
                 
@@ -436,7 +446,12 @@
                 3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Essa tag fornece um significado claro para tecnologias assistivas,
                 permitindo que identifiquem e gerenciem corretamente o foco e a interação com esse tipo de elemento.
             -->
-            <dialog open="">
+            <div class="fazer-reserva">
+                <a href="#fazer-reserva">Fazer reserva</a>
+                <a href="#">Fechar</a>
+            </div>
+            
+            <dialog id="fazer-reserva">
                 <!-- <form>:
                     1 - FUNÇÃO SEMÂNTICA DA TAG: Representa semânticamente uma seção do documento que coleta dados fornecidos
                     pelo usuário e envia esses dados para processamento em um servidor. 
@@ -492,6 +507,7 @@
                             <input type="datetime" id="quantidadeP" name="quantidadeP" required>
                         </div>
                         <button id="abrirBtn">Enviar reserva</button>
+                        
                     </fieldset>
                 </form>
             </dialog>
@@ -520,15 +536,6 @@
             </p>
 
             <p>CNPJ: 00.000.000/0000-00</p>
-            <!-- <small>:
-                1 - FUNÇÃO SEMÂNTICA DA TAG:  Representa "letras miúdas" por isso <small> que vem de (small prints) deve ser usada para englobr conteúdos
-                    de importancia secundária como restrições legais, direitos autorais e comentários laterais, por exemplo.
-
-                2 - PORQUE USEI NESTE CONTEXTO: Para englobar o as informações de  (copyright). Porque esta é a tag semânticamente correta para isso.
-
-                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: leitores de tela entendem que o texto tem menor relevância semântica dentro do conteúdo.
-                 Isso ajuda na navegação, pois usuários com leitores de tela podem priorizar o conteúdo principal
-            -->
             <small>
                 &copy; 2025 <strong>Trattoria Bella Vista</strong>. Todos os direitos reservados. 
             </small>
