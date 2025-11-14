@@ -9,20 +9,61 @@
 </head>
 
 <body>
-    <!-- <header>: É um elemento de cabeçalho, semânticamente é um elemento que deve englobar outros conteúdos de suporte introdutório ou navegacionais.
-        * Estou usando neste caso para englobar o titulo inicial e principal da página (h1), a tag <nav> e as tags <ol> e <li> que serão tags que permitirão
+    <!-- <header>:
+        1 - FUNÇÃO SEMÂNTICA DA TAG:  Englobar outros conteúdos de suporte introdutório ou navegacionais.
+
+        2 - PORQUE USEI NESTE CONTEXTO: Englobar o titulo inicial e principal da página (h1), a tag <nav> e as tags <ol> e <li> que serão tags que permitirão
           dar navegabilidade entre as sessões da página, por tanto, faz sentido semântico essas tags estarem dentro da tag <header>. 
 
-        * O impacto de SEO é que a tag <header> informa ao Google e demais buscadores que aquele bloco de código contém informações introdutórias ou 
-        navegacionais principal. Isso facilita a navegação por leitores de tela, por exemplo.
-
-        * Com relação a acessibilidade, usuários com deficiência visual por exemplo podem navegar pelo documento saltando entre seções 
+        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Os buscadores vão entender que essa é a área de entrada da página, (porque é isso que a tag <header> informa) isso vai ajudar o google
+        por exemplo, entender quem é o dono da página e como o conteúdo está organizado. 
     -->
     <header>
+        <!-- <h1>:
+            1 - FUNÇÃO SEMÂNTICA DA TAG:  Comunicar de maneira clara e imediata aos mecanismos de buscas "Este é titulo principal desta página e esta
+            página trata deste assunto."
+
+            2 - PORQUE USEI NESTE CONTEXTO: Para definir que o assunto principal que esta página irá tratar é sobre um restaurante chamado "Bella vista"
+
+            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela usam a <h1> como ponto de referência para indicar o início do conteúdo principal.
+            Assim, uma pessoa com deficiência visual pode entender rapidamente sobre o que é o site.
+        -->
         <h1>Restaurante Bella Vista</h1>
+        <!-- <nav>:
+            1 - FUNÇÃO SEMÂNTICA DA TAG:  Indica uma seção de navegação, um conjunto de links que vão levar o usuário para diferentes partes do site.
+
+            2 - PORQUE USEI NESTE CONTEXTO: Porque essa tag vai englobar uma lista de links que vão permitir que o usuário navegue pela página 
+            saltando diretamente para a parte que o interessa ou seja vai poder navegar pela página. Daí (<nav>).
+
+            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Os robôs de busca analisam o código HTML procurando blocos de navegação,
+            quando eles encontram uma tag <nav> entendem que os links dentro dele, entendem esses links como "rotas" para navegar pela página.
+        -->
         <nav>
+            <!-- <ul>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG:  Semânticamente, a tag <h1> indica um conjunto de elementos que apenas agrupam informações relacionadas, 
+                    sem uma ordem numérica ou sequencial específica. (É uma lista não ordenada)
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para fazer com que cada item do menu seja tratado como um item dessa lista não ordenada.
+
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Para pessoas com deficiencia visual que dependem de tecnologias assistivas, por exemplo,
+                essa tecnologia vai poder ler essa lista e anunciar ao usuário: "Lista com 5 itens".
+            -->
             <ul>
+                <!-- <li>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar cada item individualmente dentro da lista <ul>
+                    2 - PORQUE USEI NESTE CONTEXTO: Para fazer com que o menu seja tratado um conjunto de opções de navegação onde cada opção é um 
+                    item individual. Um <li>. 
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela podem identificar cada item como: 
+                     “item 1 de 5: Sobre”, “item 2 de 5: Menu" e assim por diante.
+                -->
                 <li><a href="#">Sobre</a></li>
+                <!-- <a>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Representa um ponto de navegação interativo dentro da página, um "hiperlink" que vai poder levar o usuário
+                    para diferentes partes da página. 
+                    2 - PORQUE USEI NESTE CONTEXTO: Usei para criar os links reais de navegação que levarão o usuário
+                    para as seções que estarão ligadas aos menus “Sobre”, “Menu”, “Horários”, etc... Através do "id".
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela podem ler o texto âncora (“link para Sobre ou qualquer outro item do menu”) permitindo navegação por voz, por exemplo.
+                -->
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Horários</a></li>
                 <li><a href="#">Reservas</a></li>
@@ -30,22 +71,115 @@
             </ul>
         </nav>
     </header>
+
+    <!-- <main>:
+        1 - FUNÇÃO SEMÂNTICA DA TAG:  Identificar e englobar o conteúdo central da página 
+
+        2 - PORQUE USEI NESTE CONTEXTO: Para agrupar todas as seções principais do site identificando que cada uma das seções trata de um tópico 
+            especifico a respeito do mesmo tema que é o restaurante Bella vista
+
+        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Buscadores entendem que o conteúdo dentro de <main> tem maior relevância para a indexação
+            que devem fazer.
+    -->
     <main>
+        <!-- <section>:
+            1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar um bloco de conteúdo do conteúdo principal da página
+
+            2 - PORQUE USEI NESTE CONTEXTO: Para organizar o conteúdo por tópicos, isso ajuda na experiencia do usuário, o conteúdo fica mais 
+            organizado e mais fácil de ser consumido.
+            
+            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Com o conteúdo dividio em tópicos as ferramentas de busca e leitores de tela reconhecem
+            tópicos separados e exibem resultados de pesquisa mais precisos e mais estruturados.
+        -->
         <section id="bem-vindo">
+            <!-- <h2>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG:  Assim como todos as tags de h1 a h6, definem hierarquias de titulos. Pode ser considerado por exemplo 
+                <h1> Como o titulo mais relevante e <h6> como o menos relevante, logo, h2 seria um subtiulo, um pouco menos relevante que o h1 (titulo).
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para representar os subtitulos que nomeiam e identificam cada seção de conteúdo.
+            
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Titulos e suas subseções ajudam mecanismos de busca a entender a hierarquia
+                e a importância das informações.
+            -->
             <h2>Bem-vindo ao restaurante<br> Bella Vista</h2>
+            <!-- <p>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar um parágrafo de texto.
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para representar o conteúdo textual deste trecho.
+            
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Tags <p> dividem o conteúdo em partes legíveis, isso melhora tanto a experiencia do
+                    usuario ao ler um conteúdo, quanto escaneabilidade, por exemplo.
+            -->
             <p>
-                Sabores <em>autênticos</em> da Itália no coração da cidade. Desfrute de <strong>pratos
+                <!-- <em>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Dar ênfase a um texto.
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Porque a frase "Sabores autênticos" faz um tipo de apelo emocinal e eu gostaria que ela que o usuário
+                    ou leitores de tela dessem ênfase a essa parte na hora de ler.
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela colocam ênfase na pronúncia quando passam por esse tipo de texto e 
+                    buscadores entendem que esse trecho tem alguma relevância semântica, isso pode ajudar com palavras-chave.
+                -->
+
+                <!-- <strong>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Indicar que determinado texto é importante.
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Porque aqui eu quis dar destaque tanto visual, quanto semântico à expressão “pratos tradicionais”.
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela colocam ênfase na pronúncia quando passam por esse tipo de texto e 
+                    buscadores entendem que esse trecho tem alguma relevância semântica, isso pode ajudar com palavras-chave.
+                -->
+                <em>Sabores autênticos</em> da Itália no coração da cidade. Desfrute de <strong>pratos
                     tradicionais</strong>
                 preparados<br>com ingredientes frescos e muito amor.
             </p>
         </section>
         <section id="nossa-historia">
             <h2>Nossa história</h2>
+
+            <!-- <article>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar um conteúdo independente, autocontido. (Um conteúdo que está nesta página mas se eu o colocasse em outro
+                contexto de maneira isolada, ele ainda teria sentido próprio.)
+
+                2 - PORQUE USEI NESTE CONTEXTO: Porque nesta parte tem a história do restaurante, e esse trecho poderia ser colocado em outro contexto.
+                Um blog por exemplo. É um conteúdo "Autocontido"
+            
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Pode ser facilmente ranqueado por motores de busca, porque cada <article> é tratado como uma
+                    unidade semântica individual que pode ser indexado de maneira própria.
+            -->
             <article>
+                <!-- <div>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Não tem um objetivo semântico, é apenas um container genérico para controlar o fluxo do conteúdo
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Apenas para fins de estilização, poder dividir o conteúdo de <article> em dois lados usando Css.
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Como não se trata de uma tag que tenha benefícios semânticos, ela também não tem
+                    impacto sobre o SEO ou de acessibilidade.
+                -->
                 <div id="tradicao">
+                    <!-- <h3>:
+                        1 - FUNÇÃO SEMÂNTICA DA TAG: Definir níveis hierarquicos de titulos, neste caso, <h3>, seria um subtópico do tópico <h2>
+
+                        2 - PORQUE USEI NESTE CONTEXTO: Porque aqui eu precisava dar um novo "titulo" (Uma Tradição de 50 Anos) para um trecho de conteúdo que já estava
+                        dentro de uma subseção que possuia um subtitulo <h2>
+            
+                        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Facilita a navegação por cabeçalhos em leitores de tela e ajudam mecanismos de busca
+                        a entender a hierarquia e a importância de cada trecho de informações.
+                    -->
                     <h3>Uma Tradição de 50 Anos</h3>
                     <p>
-                        Fundado em <time datetime="1973-06-15">15 de junho de 1973</time>, o restaurante Bella Vista tem sido um refúgio
+                        <!-- <time>:
+                            1 - FUNÇÃO SEMÂNTICA DA TAG: Fazer com que uma data ou horário presente em um conteúdo possa ser lido por 
+                            uma máquina, usando para isso, o atributo datetime = ""
+
+                            2 - PORQUE USEI NESTE CONTEXTO: Porque eu queria que navegadores ou buscadores pudessem chegar nesta informação de data
+                            e a interpretassem como um "Evento temporal" que aconteceu em algum momento.
+            
+                            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Permite que buscadores do google por exemplo, possa reconhecer eventos
+                            e horários dar alguma utilidade para essas informações.
+                        -->
+                        Fundado em <time datetime="1973-06-15">15 de junho de 1973</time>, o restaurante Bella Vista tem
+                        sido um refúgio
                         para amantes da culinária italiana autêntica. Nossa família trouxe receitas
                         tradicionais da região da Toscana e as compartilha com você há mais de cinco décadas.
                     </p>
@@ -56,9 +190,28 @@
                     </p>
                 </div>
                 <div id="destaque-mes">
+                    <!-- <aside>:
+                        1 - FUNÇÃO SEMÂNTICA DA TAG: Representar um conteúdo complementar, que está ligado ao contexto em volta de alguma forma mas é um
+                        "Algo a mais". 
+
+                        2 - PORQUE USEI NESTE CONTEXTO: Para apresentar o "Destaque do mês" que é uma informação que está ligada ao conteúdo principal
+                        mas transmite justamente essa ideia de "Uma informação a mais"
+            
+                        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Buscadores entendem que essa é informação auxiliar e não o foco principal
+                        da página, isso ajuda os buscadores a ranquear melhor a "relevancia" de cada parte do conteúdo da página.
+                    -->
                     <aside>
                         <h3>Destaque do Mês</h3>
                         <p>
+                            <!-- <mark>:
+                                1 - FUNÇÃO SEMÂNTICA DA TAG: Representar um trecho de destaque em um texto 
+
+                                2 - PORQUE USEI NESTE CONTEXTO: Para destacar os nomes de pratos que são citados no conteúda página, pois se tratando
+                                de um restaurante, os nomes de alguns pratos são itens que merecem destaque.
+            
+                                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Melhora a visibilidade de palavras-chave, ajudando usuários e motores de busca
+                                a localizar partes de destaque no conteúdo.
+                            -->
                             <mark>Risotto al Tartufo</mark> - Nosso risotto especial com trufas brancas
                             importadas diretamente do Piemonte.
                             Uma experiência única para o paladar!
@@ -70,9 +223,27 @@
 
         <section id="prado-destaque">
             <h2>Prato em Destaque</h2>
+            <!-- <figure>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG: Geralmente é usado para representar uma imagem, ilustração, trecho de código, diagrama e etc...
+                Geralmente também é associada a uma legenda que é implementada usando a tag <figcaption>
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para associar semanticamente a imagem do prato com a sua descrição usando <figcaption>
+            
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:A <figure> está associada a <figcaption> e isso  favorece o ranqueamento em buscas por imagens,
+                    pois o <figcaption> e o alt da imagem descrevem claramente o conteúdo visual.
+            -->
             <figure>
                 <img src="assets/imagem-prato.jpg"
                     alt="Imagem de um prato servido com macarrão com uma aparencia deveras palatável">
+                
+                <!-- <figcaption>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representar uma legenda que associada a uma imagem ou ilustração
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para colocar uma legenda associada a imagem do prato
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Basicamente essa tag trabalha sempre em conjunto com a tag <figure> então o impacto 
+                        em acessibilidade ou SEO é o mesmo (favorece o ranqueamento em buscas por imagens, pois o <figcaption> e o alt da imagem descrevem claramente o conteúdo visual)
+                -->
                 <figcaption>
                     Nossa famosa <mark>Pasta Carbonara </mark> - preparada com receita tradicional romana,
                     usando ovos frescos, guanciale e Pecorino Romano autêntico.
@@ -81,17 +252,78 @@
         </section>
         <section id="horario">
             <h2>Horários de Funcionamento</h2>
+            <!-- <table>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG: Representar um conjunto de elementos que estruturam dados de maneira tabular
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para dar inicio a construção de uma tabela que iria exibir os dados referentes 
+                a horários de funcionamento.
+            
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  Leitores de tela reconhecem a estrutura da tabela e o contexto de cada célula;
+                o Google entende que se trata de dados organizados, o que melhora a exibição estruturada em resultados.
+            -->
             <table>
+                <!-- <caption>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Especificar a legenda de uma tabela.
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para intitular a tabela de dados referentes ao horário de funcionamento.
+            
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  A tag <caption> fornece um “nome” acessível para a tabela em questão. Assim, Leitores de tela anunciam a 
+                    legenda ao entrar na tabela, facilitando entender o contexto sem precisar ler conteúdo antes/depois.
+                -->
                 <caption>Horários de Atendimento - Temporada de Verão 2025</caption>
+                <!-- <thead>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representa o conteudo de cabeçalho da tabela 
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Porque se trata de uma tabela e esta é a tag indicada para esta posição
+
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  Mostra aos motores de busca que ali começa uma tabela e quais são os itens
+                    Sobre os quais se tratará aquela tabela
+                -->
                 <thead>
+                    <!-- <tr>:
+                        1 - FUNÇÃO SEMÂNTICA DA TAG: Representar uma linha dentro de uma tabela
+
+                        2 - PORQUE USEI NESTE CONTEXTO: Para representar cada linha de conteúdo da tabela
+
+                        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Indica aos leitores de tela que os elementos contidos
+                        nela pertencem a uma mesma linha horizontal da tabela.
+                    -->
                     <tr>
+                        <!-- <th>:
+                            1 - FUNÇÃO SEMÂNTICA DA TAG: Representar o conteúdo que está dentro dela como um cabeçalho, pode ser para uma coluna
+                            ou para uma linha.
+
+                            2 - PORQUE USEI NESTE CONTEXTO: Para englobar o conteúdo que seria o cabeçaho da tabela (Dia da semana, almoço, jantar)
+
+                            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela podem utilizar essa tag para entender a estrutura da tabela
+                            e associar os dados que estão dentro dela com os dados correspondentes na tabela.
+                        -->
                         <th>Dia da semana</th>
                         <th>Almoço</th>
                         <th>Jantar</th>
                     </tr>
                 </thead>
+                <!-- <tbody>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representa o corpo principal de dados da tabela
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Porque esta é a estrutura que vai englobar os dados de fato importantes da tabela,
+                    o corpo principal.
+
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Melhora a acessibilidade para tecnologias assistivas que
+                    podem interpretar melhor a estrutura da tabela e auxiliar na navegação, lendo, por exemplo, o cabeçalho antes
+                    dos dados do corpo.
+                -->
                 <tbody>
                     <tr>
+                        <!-- <td>:
+                            1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar uma célula de dados dentro da estrutura de uma tabela
+
+                            2 - PORQUE USEI NESTE CONTEXTO: Porque nesta parte ficariam os dados reais, dentro de cada <td> estariam do dados
+                                que de fato importam. Diferente da <th> por exemplo que representa apenas o cabeçalho.
+
+                            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Motores de busca o significado semântico dessa tag para
+                             relacionar os dados dela com os dados da <th>
+                        -->
                         <td>Segunda a Sexta</td>
                         <td>Fechado</td>
                         <td><time datetime=" 18:00">18h</time> - <time datetime="23:00"></time>23h</td>
@@ -118,6 +350,15 @@
                     </tr>
                 </tbody>
 
+                <!-- <tfoot>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar e agrupar o conteúdo de rodapé de uma tabela
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para englobar o texto que seria o rodapé da tabela, que não representa nenhum dado
+                    importante, apenas uma informação complementar.
+
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Para leitores de tela essa tag ajuda danto contexto
+                    sobre o tipo de informação contida naquela seção (geralmente resumos, totais ou notas de rodapé).
+                -->
                 <tfoot>
                     <tr>
                         <td colspan=" 3">Reservas recomendadas para fins de semana</td>
@@ -127,32 +368,108 @@
         </section>
         <section id="perguntas">
             <h2>Perguntas Frequentes</h2>
+            <!-- <details>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG: Representar um conteúdo adicional, um detalhe a mais que o usuário pode querer ou não, visualizar. 
+
+                2 - PORQUE USEI NESTE CONTEXTO: Porque essa tag é semânticamente apropriada para englobar uma sessão de "perguntas frequentes"
+
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Ajuda mecanismos de busca e tecnologias assistivas 
+                 a entenderem melhor a relação entre o conteúdo que está visivel e o conteúdo detalhado oculto. 
+                 Isso melhora a acessibilidade e a navegação da página.
+            -->
             <details>
+                <!-- <summary>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representar um sumário, legenda ou título visível para o conteúdo de um elemento.
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para definir o titulo (cada pergunta frequante) essa é a tag semântica correta 
+                    para este caso de uso
+
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Ao usar <summary> e <details> navegadores, leitores de tela
+                        e mecanismos entendem melhor a relação entre o título (sumário) e as informações detalhadas que estão ocultas.
+                        Isso melhora a acessibilidade da página.
+                -->
                 <summary>Vocês aceitam cartão de crédito</summary>
-                <p>Sim! Aceitamos todos os principais cartões de crédito e débito, além de <abbr
-                title="Pagamento por aproximação">NFC</abbr> e PIX.</p>
+                
+                <p>Sim! Aceitamos todos os principais cartões de crédito e débito, além de 
+                    <!-- <abbr>:
+                        1 - FUNÇÃO SEMÂNTICA DA TAG: Representar uma abreviação e fornecer a informação completa através do atributo "title".
+
+                        2 - PORQUE USEI NESTE CONTEXTO: Porque eu queria colocar uma informação do significado de "NFC" mas queria 
+                        que essa informação ficasse fora do fluxo normal do conteúdo
+
+                        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Para usuários de leitores de tela, essa tag permite que o software
+                        anuncie corretamente o texto como uma abreviação ou, se especificado (atravé so atibuto "title"), a sua explicação completa,
+                        melhorando significativamente
+                        isso melhora muito compreensão do conteúdo para o usuário.
+                    -->
+                    <abbr
+                        title="Pagamento por aproximação">NFC
+                    </abbr> e PIX.
+                </p>
             </details>
             <details>
                 <summary>Há opções vegetarianas no menu?</summary>
-                <p>Certamente! Temos diversas opções vegetarianas e veganas, incluindo nossas deliciosas <mark>lasanhas de
-                berinjela</mark> e <mark>erisottos com cogumelos</mark></p>
+                <p>Certamente! Temos diversas opções vegetarianas e veganas, incluindo nossas deliciosas <mark>lasanhas
+                        de
+                        berinjela</mark> e <mark>erisottos com cogumelos</mark></p>
             </details>
             <details>
                 <summary>Preciso fazer reserva?</summary>
                 <p>Para grupos acima de 4 pessoas ou visitas aos fins de semana,recomendamos fortemente fazer reserva
-                através do nosso formulário ou ligando para (99) 9999-9999.</p>
+                    através do nosso formulário ou ligando para (99) 9999-9999.</p>
             </details>
             <details>
                 <summary>Vocês oferecem serviço de delivery?</summary>
                 <p>Sim! Fazemos entregas em um raio de 5km do restaurante. Pedidos podem ser feitos pelo telefone ou
-                aplicativos parceiros.</p>
+                    aplicativos parceiros.</p>
             </details>
         </section>
         <section id="reserva">
             <h2>Faça sua Reserva</h2>
-            <dialog>
-                <form action="">
+            <!-- <dialog>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG: Representar uma caixa de diálogo ou outro componente interativo,
+                 como um alerta dispensável ou subjanela, por exemplo.
+
+                2 - PORQUE USEI NESTE CONTEXTO: Usei apenas para aproveitar o sentido e benefícios semânticos da tag, sem usar de fato seus atributos
+                de iteração, por enquanto.
+
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Essa tag fornece um significado claro para tecnologias assistivas,
+                permitindo que identifiquem e gerenciem corretamente o foco e a interação com esse tipo de elemento.
+            -->
+            <dialog open="">
+                <!-- <form>:
+                    1 - FUNÇÃO SEMÂNTICA DA TAG: Representa semânticamente uma seção do documento que coleta dados fornecidos
+                    pelo usuário e envia esses dados para processamento em um servidor. 
+
+                    2 - PORQUE USEI NESTE CONTEXTO: Para englobar o conjunto de inputs que vai coletar os dados do usuário
+                    necessários para fazer uma reserva no restaurante.
+
+                    3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  Para tecnologias assistivas,essa tag sinaliza o início e o fim de um formulário,
+                    isso permite que essas tecnologias naveguem e interajam com os controles de forma apropriada,
+                    melhorando significativamente a acessibilidade para usuários com deficiência.
+                -->
+                <form>
+                    <!-- <fieldset>:
+                        1 - FUNÇÃO SEMÂNTICA DA TAG: Representar uma relação lógica entre campos de formulário que, de outra forma,
+                         poderiam parecer desconexos. 
+
+                        2 - PORQUE USEI NESTE CONTEXTO: Porque eu queria "amarrar" todos os inputs de coleta de dados que fazem referencia
+                        a único propósito que é "fazer uma reserva", ou seja, establecer uma conexão lógica entre esses campos.
+
+                        3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: Leitores de tela e outras tecnologias assistivas usam essa tag
+                            para interpretar a relação entre os campos agrupados e a legenda fornecida pela tag <legend>.
+                    -->
                     <fieldset>
+                        <!-- <legend>:
+                            1 - FUNÇÃO SEMÂNTICA DA TAG:  Representar a legenda ou título para o conteúdo de seu elemento pai,
+                            que deve ser um elemento <fieldset>
+
+                            2 - PORQUE USEI NESTE CONTEXTO: Para colocar a legenda do formulario (Dados da reserva) semânticamente essa é a tag
+                            correta para este caso.
+
+                            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  Leitores de tela utilizam essa tag para anunciar a finalidade
+                            do grupo de campos aos usuários com deficiência visual
+                        -->
                         <legend>Dados da reserva</legend>
                         <div>
                             <label for="nome">Nome completo</label><br>
@@ -179,25 +496,44 @@
                 </form>
             </dialog>
         </section>
-        <footer>
-            <address>
-                <p>
-                    Endereço:<br>
-                    Rua das Oliveiras, 234<br>
-                    Jardim Toscana - São Paulo, SP<br>
-                    CEP: 01234-567<br>
-                </p>
-                <p>
-                    Telefone: <a href="tel:+5599999999999">(99) 99999-9999</a><br>
-                    Email: <a href="mailto:contato@rickbarber.com">contato@bellavista.com.br</a>
-                </p>
-                <small>
-                    &copy; 2025 <strong>Trattoria Bella Vista</strong>. Todos os direitos reservados. |
-                    <span>CNPJ: 00.000.000/0000-00</span>
-                </small>
-            </address>
-        </footer>
     </main>
+    <footer>
+        <!-- <address>:
+            1 - FUNÇÃO SEMÂNTICA DA TAG:  Fornecer informações de contato ou endereço do autor do documento. Pode ser  endereço físico, URL, email,
+             telefone, mídia social, coordenadas geográficas, por aí vai
+
+            2 - PORQUE USEI NESTE CONTEXTO: Usei para englobar as informações de contato e endereço do restaurante, esta é a tag semântica ideal para fazer isso.
+
+            3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO:  Motores de busca e leitores de tela conseguem identificar automaticamente que aquele bloco contém
+            informações de contato oficiais. Isso é importante na hora de levar essa informação para pessoas com deficiencias visuais, por exemplo.
+        -->
+        <address>
+            <p>
+                Endereço:<br>
+                Rua das Oliveiras, 234<br>
+                Jardim Toscana - São Paulo, SP<br>
+                CEP: 01234-567<br>
+            </p>
+            <p>
+                Telefone: <a href="tel:+5599999999999">(99) 99999-9999</a><br>
+                Email: <a href="mailto:contato@rickbarber.com">contato@bellavista.com.br</a>
+            </p>
+
+            <p>CNPJ: 00.000.000/0000-00</p>
+            <!-- <small>:
+                1 - FUNÇÃO SEMÂNTICA DA TAG:  Representa "letras miúdas" por isso <small> que vem de (small prints) deve ser usada para englobr conteúdos
+                    de importancia secundária como restrições legais, direitos autorais e comentários laterais, por exemplo.
+
+                2 - PORQUE USEI NESTE CONTEXTO: Para englobar o as informações de  (copyright). Porque esta é a tag semânticamente correta para isso.
+
+                3 - EXEMPLO DE IMPACTO EM ACESSIBILIDADE OU SEO: leitores de tela entendem que o texto tem menor relevância semântica dentro do conteúdo.
+                 Isso ajuda na navegação, pois usuários com leitores de tela podem priorizar o conteúdo principal
+            -->
+            <small>
+                &copy; 2025 <strong>Trattoria Bella Vista</strong>. Todos os direitos reservados. 
+            </small>
+        </address>
+    </footer>
 </body>
 
 </html>

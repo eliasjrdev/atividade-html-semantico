@@ -246,7 +246,15 @@ article{
 
 #reserva{
     width: 1100px;
-    margin-bottom: 100px;
+    height: 700px;
+    position: relative;        
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+dialog{
+    display: flex;
+    border: none;
 }
 
 #reserva h2{
